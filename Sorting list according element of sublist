@@ -1,0 +1,27 @@
+# sorting according 1st and 2nd element of sublist 
+
+# case -1 -- according to first element 
+
+# sort will by default sort element according to 1st element of subarray
+
+l = [['A',1],['X',20],['M',19],['C',25]]
+l.sort()
+print(l)
+
+print(sorted(l))
+
+
+#  case 2 -- according to 2nd element 
+
+for i in range(len(l)):
+    for j in range(len(l)-1):
+        if l[j][1]>l[j+1][1]:
+            temp = l[j]
+            l[j] = l[j+1]
+            l[j+1] = temp 
+            
+print('sorted list according to 2nd element of sublist :',l)
+
+k = [[1,'A'],[15,'B'],[10,'C']]
+k.sort()
+print(k)
