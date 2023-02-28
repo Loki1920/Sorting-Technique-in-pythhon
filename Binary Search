@@ -1,0 +1,24 @@
+# Binary Search
+
+def BinarySearch(list1,key):
+    l=0
+    h = len(list1)-1
+    f = 0
+    while l<=h and f==0:
+        m = (l+h)//2
+        if list1[m] == key:
+            f = 1 
+        elif key > list1[m]:
+            l = m+1 
+        else:
+            h = m-1 
+    if f==1:
+        print("Found")
+    else:
+        print("Not found")
+
+l = [3,4,5,6,1,98,34,90,23]
+
+l.sort()
+k = int(input("key:"))
+BinarySearch(l,k)
